@@ -8,6 +8,9 @@
 # Примечание: Список словарей задан изначально.
 # Пользователь его не вводит
 
+# slovar = {1: "jdhfjds", 2: "kcs", 3: "kcs", 4: "54gf", 5: "54gf"}
+# print(set(slovar.values()))
+
 # 1 Вариант (ТЗ здорового человека)
 # data = {'1': 'S001',
 #         '2': 'S002',
@@ -70,6 +73,14 @@
 # Примечание: Пользователь может вводить значения
 # списка или список задан изначально.
 
+spisok = [1,1,1,2,4,6]
+count = 0
+min_value = spisok [0]
+for i in spisok:
+    if i > min_value:
+        count += 1   
+    min_value = i
+print (count)
 
 # 1 Вариант строго по тз
 
@@ -112,44 +123,44 @@
 
 # 2 ВАРИАНТ (универсальный + вывод значений которые больше)
 
-import random
+# import random
 
-array_frs = []
+# array_frs = []
 
-while True:
-    a = input('Как вы хотите заполнить список. Напишите (вручную или автоматически) -> ')
-    if a == 'вручную' or a == 'автоматически':
-        break
+# while True:
+#     a = input('Как вы хотите заполнить список. Напишите (вручную или автоматически) -> ')
+#     if a == 'вручную' or a == 'автоматически':
+#         break
 
-while True:
-    array_len = int(input('Введите длину списка -> '))
-    if array_len > 0:
-        break
+# while True:
+#     array_len = int(input('Введите длину списка -> '))
+#     if array_len > 0:
+#         break
 
-# Заполнение списка
-if a == 'вручную':
-    i = 1
-    while i <= array_len:
-        a = int(input(f'Введите {i} элемент списка -> '))
-        array_frs.append(a)
-        i += 1
-if a == 'автоматически':
-    while array_len > 0:
-        a = random.randint(-20, 20)
-        array_frs.append(a)
-        array_len -= 1
+# # Заполнение списка
+# if a == 'вручную':
+#     i = 1
+#     while i <= array_len:
+#         a = int(input(f'Введите {i} элемент списка -> '))
+#         array_frs.append(a)
+#         i += 1
+# if a == 'автоматически':
+#     while array_len > 0:
+#         a = random.randint(-20, 20)
+#         array_frs.append(a)
+#         array_len -= 1
 
-print(array_frs)
-count = 0
-res_array = ''
-
-
-for i in range(1, len(array_frs)):
-    frst, scnd = array_frs[i-1], array_frs[i]
-    if frst < scnd:
-        res_array += ' (' + str(frst) + ' < ' + str(scnd) + ') '
-        count += 1
+# print(array_frs)
+# count = 0
+# res_array = ''
 
 
-print(count)
-print(res_array)
+# for i in range(1, len(array_frs)):
+#     frst, scnd = array_frs[i-1], array_frs[i]
+#     if frst < scnd:
+#         res_array += ' (' + str(frst) + ' < ' + str(scnd) + ') '
+#         count += 1
+
+
+# print(count)
+# print(res_array)
