@@ -1,21 +1,25 @@
-from Sem8 import create
+from Sem8 import *
 from interface import *
-path = "phone_book.txt"
-create(path)
 
-enter = 0
-
-while enter !=4:
-    enter = interface()
+while True:
+    interface()
+    enter = int(input("Выберите действие: "))
     if enter == 1:
-        from Sem8 import add_cont
-        stroka = str(input('Введите ФИО и номер телефона через пробел '))
-        add_cont(path, stroka)
+        chelovek = str(input('Введите ФИО и номер телефона через пробел '))
+        add_contakt(chelovek)
     elif enter == 2:
-        from Sem8 import show_all
-        print (show_all(path))
+        show_all()
     elif enter == 3:
-        from Sem8 import search
-        stroka = str(input('Введите Фамилию '))
-        search (path,stroka)
-print ("Спасибо за работу!")
+        poisk = str(input('Введите данные для поиска '))
+        search (poisk)
+    elif enter == 4:
+        changes = str(input('Введите данные для изменения контакта '))
+        change (changes)  
+    elif enter == 5:
+        deleteEl = str(input('Введите данные для удаления '))
+        delete_element (deleteEl)  
+    elif enter == 6:
+        break
+    else:
+        print ("Введены неверные данные")
+#print ("Спасибо за работу!")
